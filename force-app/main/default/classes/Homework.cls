@@ -98,24 +98,19 @@ public with sharing class Homework
 
     public Integer equals(String first, String second)
     {
-        Integer result;
+        Integer result = -1;
 
         // set result to 0 if first and second are equal
         // set result to 1 if first is greater than second 
         // set result to -1 if first is less than second 
-        if (first == second)
+     
+        if (first == second) 
         {
             result = 0;
         }
-
-        if (first > second)
+        else if (first > second) 
         {
             result = 1;
-        }
-
-        if (first < second)
-        {
-            result = -1;
         }
 
         return result;
@@ -129,9 +124,7 @@ public with sharing class Homework
         // e.g. if value is 10 and power is 2, result should be 100
         // do not use a loop!
 
-        // I feel like there should be a more elegant way of doing this!
-        Double dblValue = (Double) value;
-        result = Math.pow(dblValue, power).intValue(); 
+        result = Math.pow(value, power).intValue(); 
 
         return result;
     }
@@ -170,8 +163,4 @@ public with sharing class Homework
         System.assertEquals(70, estateCar.speed);
     }
 
-    private class Car
-    {
-        private Integer speed;
-    }
 }
